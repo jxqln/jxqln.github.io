@@ -3,13 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinite Babel</title>
+    <title>Test</title>
 </head>
 <body>
-    <div class="container">
-        <div id="generatedText"></div>
-    </div>
+    <h1>Mistral AI Text Generation</h1>
+    <label for="inputPrompt">Enter your prompt:</label>
+    <input type="text" id="inputPrompt" value="Hello!!">
+    <button id="generateBtn">Generate Text</button>
+    <p>Generated Text:</p>
+    <textarea id="outputText" rows="10" cols="50" readonly></textarea>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('generateBtn').addEventListener('click', async () => {
+            const inputPrompt = document.getElementById('inputPrompt').value;
+            const outputText = document.getElementById('outputText');
+
+            outputText.value = "Generating...";
+
+            try {
+                const response = await fetch("https://hf.space/embed/jacquelinegrimm/mistralai-Mistral-7B-v0.1/api/predict/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        data: [inputPrompt]
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                outputText.value = result.data[0] ?? "No response data.";
+            } catch (error) {
+                console.error("Error:", error);
+                outputText.value = `An error occurred: ${error.message}`;
+            }
+        });
+    </script>
 </body>
 </html>
