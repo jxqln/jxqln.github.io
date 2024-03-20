@@ -13,6 +13,6 @@
         console.log(result.data);
     } catch (error) {
         console.error("Error:", error);
-        generatedTextDiv.innerHTML = "An error occurred while generating the text.";
+        generatedTextDiv.innerHTML = "An error occurred.";
     }
 })();
