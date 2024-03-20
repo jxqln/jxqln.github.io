@@ -1,7 +1,5 @@
 // script.js
 
-import { client } from "@gradio/client";
-
 const beginLink = document.getElementById("beginLink");
 const generatedTextDiv = document.getElementById("generatedText");
 
