@@ -40,24 +40,32 @@
     </map>
     <p>Data Source: <a href="https://biogis.huji.ac.il/">BioGIS (2024)</a></p>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mapAreas = document.querySelectorAll('map[name="image-map"] area');
-            mapAreas.forEach(area => {
-                area.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const href = this.getAttribute('href');
-                    // Determine popup size based on file extension
-                    const isPng = href.endsWith('.png');
-                    const popUpWidth = isPng ? 463 : 560;
-                    const popUpHeight = isPng ? 464 : 315;
-                    const left = (screen.width/2)-(popUpWidth/2);
-                    const top = (screen.height/2)-(popUpHeight/2);
-                    window.open(href, 'popUpWindow', `width=${popUpWidth},height=${popUpHeight},top=${top},left=${left}`);
-                });
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mapAreas = document.querySelectorAll('map[name="image-map"] area');
+        mapAreas.forEach(area => {
+            area.addEventListener('click', function(event) {
+                event.preventDefault();
+                const href = this.getAttribute('href');
+                // Determine popup size based on file extension
+                const isPng = href.endsWith('.png');
+                const popUpWidth = isPng ? 463 : 560;
+                const popUpHeight = isPng ? 464 : 315;
+
+                // Ensure the popup doesn't appear too close to the screen edges
+                const margin = 50;
+                const screenWidth = window.innerWidth;
+                const screenHeight = window.innerHeight;
+
+                // Calculate semi-random position
+                const left = Math.max(margin, Math.min(screenWidth - popUpWidth - margin, Math.random() * screenWidth));
+                const top = Math.max(margin, Math.min(screenHeight - popUpHeight - margin, Math.random() * screenHeight));
+
+                window.open(href, 'popUpWindow', `width=${popUpWidth},height=${popUpHeight},top=${top},left=${left}`);
             });
         });
-    </script>
+    });
+</script>
     
 </body>
 </html>
