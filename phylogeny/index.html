@@ -39,5 +39,24 @@
         <area alt="corvus" title="corvus" href="https://www.poetryfoundation.org/poems/48860/the-raven" coords="87,968,90,991,215,974,212,952" shape="poly">
     </map>
     <p>Data Source: <a href="https://biogis.huji.ac.il/">BioGIS (2024)</a></p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mapAreas = document.querySelectorAll('map[name="image-map"] area');
+            mapAreas.forEach(area => {
+                area.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const href = this.getAttribute('href');
+                    // Open a new pop-up window at the center of the screen
+                    const popUpWidth = 600;
+                    const popUpHeight = 400;
+                    const left = (screen.width/2)-(popUpWidth/2);
+                    const top = (screen.height/2)-(popUpHeight/2);
+                    window.open(href, 'popUpWindow', `width=${popUpWidth},height=${popUpHeight},top=${top},left=${left}`);
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>
