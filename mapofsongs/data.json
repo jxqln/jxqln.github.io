@@ -1,0 +1,116 @@
+[
+  {
+    "latitude": 30.24988,
+    "longitude": -97.74612,
+    "hovertext": "Light as a Feather - Teen Girl Scientist Monthly",
+    "color": "#fafa6e"
+  },
+  {
+    "latitude": 40.79748,
+    "longitude": -119.19509,
+    "hovertext": "U.R.A.Q.T. - M.I.A.",
+    "color": "#1a737c"
+  },
+  {
+    "latitude": 45.51493,
+    "longitude": -122.67563,
+    "hovertext": "Lexicon Devil - Germs",
+    "color": "#2a4858"
+  },
+  {
+    "latitude": 38.93748,
+    "longitude": -77.35257,
+    "hovertext": "Salad Days - Minor Threat",
+    "color": "#2a4858"
+  },
+  {
+    "latitude": 50.08675,
+    "longitude": 14.40939,
+    "hovertext": "Wu‐Tang Clan Ain’t Nuthing ta F’ Wit - Wu-Tang Clan",
+    "color": "#1a737c"
+  },
+  {
+    "latitude": 50.08069,
+    "longitude": 14.43273,
+    "hovertext": "Habanera",
+    "color": "#c5ec71"
+  },
+  {
+    "latitude": 41.91151,
+    "longitude": 12.5208,
+    "hovertext": "What's That Perfume That You Wear? - Jens Lekman",
+    "color": "#239f8a"
+  },
+  {
+    "latitude": 34.00964,
+    "longitude": -118.49824,
+    "hovertext": "Go Outside - Cults",
+    "color": "#42b588"
+  },
+  {
+    "latitude": 40.35632,
+    "longitude": -74.66265,
+    "hovertext": "Give It Up - KC and The Sunshine Band",
+    "color": "#fafa6e"
+  },
+  {
+    "latitude": 52.51864,
+    "longitude": 13.39726,
+    "hovertext": "Joker and the Thief - Wolfmother",
+    "color": "#94dc79"
+  },
+  {
+    "latitude": -23.55954,
+    "longitude": -46.63924,
+    "hovertext": "O Canto da Cidade - Daniela Mercury",
+    "color": "#fafa6e"
+  },
+  {
+    "latitude": 38.95195,
+    "longitude": -77.34818,
+    "hovertext": "Na Rua, Na Chuva, Na Fazenda - Hyldon",
+    "color": "#fafa6e"
+  },
+  {
+    "latitude": 19.24768,
+    "longitude": 72.85003,
+    "hovertext": "Pal Pal Har Pal",
+    "color": "#fafa6e"
+  },
+  {
+    "latitude": 31.78025,
+    "longitude": 35.21572,
+    "hovertext": "נערי שובה אלי - Margalit Tzan'ani",
+    "color": "#68c981"
+  },
+  {
+    "latitude": 40.56404,
+    "longitude": -105.13203,
+    "hovertext": "Estar Vivo É Bom - Lau e Eu",
+    "color": "#fafa6e"
+  },
+  {
+    "latitude": 47.49261,
+    "longitude": -121.78763,
+    "hovertext": "XS - ANAÏS MVA",
+    "color": "#2a4858"
+  },
+  {
+    "latitude": 38.03788,
+    "longitude": -78.48992,
+    "hovertext": "Sleepyhead - Passion Pit",
+    "color": "#2a4858"
+  },
+  {
+    "latitude": 38.03438,
+    "longitude": -78.51228,
+    "hovertext": "I Want You to Want Me - Cheap Trick",
+    "color": "#239f8a"
+  },
+  {
+    "latitude": 38.88157,
+    "longitude": -77.04952,
+    "hovertext": "La Bamba",
+    "color": "#c5ec71"
+  }
+]
