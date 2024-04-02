@@ -18,7 +18,8 @@ fetch("data.json")
   const layout = {
     geo: {
       projection: {
-        type: "orthographic"
+        type: "orthographic",
+        scale: 0.5
       }
     },
     width: 800,
