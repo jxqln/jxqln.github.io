@@ -28,10 +28,15 @@ fetch("data.json")
       t: 0,
       l: 0,
       b: 0
-    }
+    },
+    showlegend: false
   };
 
-  Plotly.newPlot("map", plotData, layout);
+  const config = {
+    displayModeBar: false // Hide the mode bar
+  };
+
+  Plotly.newPlot("map", plotData, layout, config);
 })
 .catch(error => {
   console.error("Error loading JSON data:", error);
