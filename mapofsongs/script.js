@@ -21,7 +21,8 @@ fetch("data.json")
         type: "orthographic",
         scale: 0.6,
         rotation: {
-          lon: -90
+          lon: -80,
+          lat: 10
         }
       }
     },
@@ -37,7 +38,7 @@ fetch("data.json")
   };
 
   const config = {
-    displayModeBar: false // Hide the mode bar
+    displayModeBar: false
   };
 
   Plotly.newPlot("map", plotData, layout, config);
