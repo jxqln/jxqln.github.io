@@ -17,10 +17,25 @@
       width: 800px;
       height: 800px;
     }
+    .text-overlay {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+    .text-overlay a {
+      text-decoration: none;
+      color: #000;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
   <div id="map"></div>
+  <div class="text-overlay">
+    <a href="/about.html" target="_blank">About</a>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
