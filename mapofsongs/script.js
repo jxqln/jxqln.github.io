@@ -19,7 +19,10 @@ fetch("data.json")
     geo: {
       projection: {
         type: "orthographic",
-        scale: 0.6
+        scale: 0.6,
+        rotation: {
+          lon: -90
+        }
       }
     },
     width: 800,
