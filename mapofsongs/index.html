@@ -5,6 +5,13 @@
   <link rel="icon" type="image/png" href="../favicon.png">
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <style>
+    @font-face {
+      font-family: 'Playfair Display';
+      src: url('../fonts/static/PlayfairDisplay-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
     body, html {
       margin: 0;
       padding: 0;
@@ -29,13 +36,77 @@
       font-family: Arial, sans-serif;
       font-size: 16px;
     }
+    .text-overlay {
+      position: fixed;
+      bottom: 20px;
+      z-index: 1000;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .left-overlay {
+      left: 20px;
+    }
+    .right-overlay {
+      right: 20px;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 400px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+    }
+    .left-popup {
+      left: 50%;
+      margin-left: -200px;
+    }
+    .right-popup {
+      right: 20px;
+    }
   </style>
 </head>
 <body>
   <div id="map"></div>
-  <div class="text-overlay">
-    <a href="/about.html" target="_blank">About</a>
+  <div class="text-overlay left-overlay" onclick="openPopup('left-popup')">Left Text</div>
+  <div class="text-overlay right-overlay" onclick="openPopup('right-popup')">Right Text</div>
+  <div id="left-popup" class="popup left-popup">
+    <h2>Left Popup Content</h2>
+    <p>This is the content for the left popup.</p>
+  </div>
+  <div id="right-popup" class="popup right-popup">
+    <h2>Right Popup Content</h2>
+    <p>This is the content for the right popup.</p>
   </div>
   <script src="script.js"></script>
+  <script>
+    function openPopup(popupId) {
+      document.getElementById(popupId).style.display = 'block';
+    }
+
+    function closePopup(popupId) {
+      document.getElementById(popupId).style.display = 'none';
+    }
+
+    document.addEventListener('click', function(event) {
+      var leftPopup = document.getElementById('left-popup');
+      var rightPopup = document.getElementById('right-popup');
+      var leftOverlay = document.querySelector('.left-overlay');
+      var rightOverlay = document.querySelector('.right-overlay');
+
+      if (!leftPopup.contains(event.target) && !leftOverlay.contains(event.target)) {
+        closePopup('left-popup');
+      }
+
+      if (!rightPopup.contains(event.target) && !rightOverlay.contains(event.target)) {
+        closePopup('right-popup');
+      }
+    });
+  </script>
 </body>
 </html>
