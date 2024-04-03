@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About This Map</title>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <style>
+    @font-face {
+      font-family: 'Playfair Display';
+      src: url('../fonts/static/PlayfairDisplay-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 20px;
+      background-color: black;
+      color: rgb(250, 255, 250);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .image {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .caption {
+      margin-bottom: 20px;
+    }
+
+    .github-link {
+      color: #0096ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>About This Map</h1>
+
+  <div class="container">
+    <p>This is a visualization of a list of songs that I associate with specific places in my memory, plotted on an interactive, 3-D globe. Feel free to zoom and pan around the globe to explore! The songs are color-coded according to sentiment analysis of their lyrics, with yellow representing positive sentiment and blue representing negative sentiment.</p>
+
+    <div class="image">
+      <img src="scale.png" alt="Sentiment Scale">
+    </div>
+    <div class="caption">
+      <p>More Positive Sentiment &lt; --- &gt; More Negative Sentiment</p>
+    </div>
+
+    <p>To build your own 3-D map, you can find the code for this project <a href="https://github.com/jacquelinegrimm/jacquelinegrimm.github.io/tree/main/mapofsongs" class="github-link">on GitHub</a>.</p>
+  </div>
+</body>
+</html>
