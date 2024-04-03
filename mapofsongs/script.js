@@ -25,7 +25,27 @@ fetch("data.json")
           lat: 10
         }
       },
-      bgcolor: "rgba(69, 173, 168)"
+      bgcolor: "black",
+      oceancolor: "rgba(4, 17, 29, 50)",
+      landcolor: "rgba(4, 17, 29, 50)",
+      showocean: true,
+      showland: true,
+      showcountries: true,
+      countrycolor: "rgba(25, 100, 155, 0.5)",
+      coastlinecolor: "rgba(250, 255, 250, 100)",
+      framecolor: "rgba(80, 20, 80, 10)",
+      lonaxis: {
+        showgrid: true,
+        gridcolor: "rgba(80, 20, 80, 100)",
+        gridwidth: 0.5,
+        dtick: 35
+      },
+      lataxis: {
+        showgrid: true,
+        gridcolor: "rgba(80, 20, 80, 100)",
+        gridwidth: 0.5,
+        dtick: 20
+      }
     },
     width: 800,
     height: 800,
