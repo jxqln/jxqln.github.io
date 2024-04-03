@@ -24,7 +24,8 @@ fetch("data.json")
           lon: -80,
           lat: 10
         }
-      }
+      },
+      bgcolor: "rgba(69, 173, 168)"
     },
     width: 800,
     height: 800,
