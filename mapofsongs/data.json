@@ -19,12 +19,12 @@
   },
   {
     "latitude": 38.93748,
-    "longitude": -77.35257,
+    "longitude": -77.55257,
     "hovertext": "Salad Days - Minor Threat",
     "color": "#2a4858"
   },
   {
-    "latitude": 50.08675,
+    "latitude": 50.38675,
     "longitude": 14.40939,
     "hovertext": "Wu‐Tang Clan Ain’t Nuthing ta F’ Wit - Wu-Tang Clan",
     "color": "#1a737c"
@@ -80,7 +80,7 @@
   {
     "latitude": 31.78025,
     "longitude": 35.21572,
-    "hovertext": "נערי שובה אלי - Margalit Tzan'ani",
+    "hovertext": "Na'ari Shuva Elai - Margalit Tzan'ani",
     "color": "#68c981"
   },
   {
@@ -97,7 +97,7 @@
   },
   {
     "latitude": 38.03788,
-    "longitude": -78.48992,
+    "longitude": -78.68992,
     "hovertext": "Sleepyhead - Passion Pit",
     "color": "#2a4858"
   },
