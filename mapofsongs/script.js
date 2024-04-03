@@ -30,13 +30,28 @@ fetch("data.json")
 
   plotData.push(equatorTrace);
 
+  const meridianTrace = {
+    type: "scattergeo",
+    mode: "lines",
+    lon: Array(360).fill(0),
+    lat: Array.from({ length: 360 }, (_, i) => i - 180),
+    line: {
+      color: "rgba(250, 255, 250, 100)",
+      width: 1,
+      dash: "dash"
+    },
+    name: ""
+  };
+
+  plotData.push(meridianTrace);
+
   const layout = {
     geo: {
       projection: {
         type: "orthographic",
         scale: 0.65,
         rotation: {
-          lon: -85,
+          lon: -60,
           lat: 15
         }
       },
