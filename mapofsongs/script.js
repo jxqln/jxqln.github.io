@@ -51,8 +51,8 @@ fetch("data.json")
         type: "orthographic",
         scale: 0.65,
         rotation: {
-          lon: -80,
-          lat: 10
+          lon: -75,
+          lat: 20
         }
       },
       bgcolor: "black",
