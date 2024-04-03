@@ -15,6 +15,36 @@ fetch("data.json")
     name: ""
   }));
 
+  const equatorTrace = {
+    type: "scattergeo",
+    mode: "lines",
+    lat: Array(360).fill(0),
+    lon: Array.from({ length: 360 }, (_, i) => i - 180),
+    line: {
+      color: "rgba(250, 255, 250, 100)",
+      width: 1,
+      dash: "dash"
+    },
+    name: ""
+  };
+
+  plotData.push(equatorTrace);
+
+  const primeMeridianTrace = {
+    type: "scattergeo",
+    mode: "lines",
+    lat: Array.from({ length: 360 }, (_, i) => (i <= 180 ? i - 90 : 270 - i)),
+    lon: Array.from({ length: 360 }, (_, i) => (i <= 180 ? 0 : (i === 181 ? -180 : 180))),
+    line: {
+      color: "rgba(250, 255, 250, 100)",
+      width: 1,
+      dash: "dash"
+    },
+    name: ""
+  };
+
+  plotData.push(primeMeridianTrace);
+
   const layout = {
     geo: {
       projection: {
