@@ -1,63 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jacqueline.dev</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <style>
-    @font-face {
-      font-family: 'Playfair Display';
-      src: url('/fonts/static/PlayfairDisplay-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Playfair Display';
-      src: url('/fonts/static/PlayfairDisplay-Italic.ttf') format('truetype');
-      font-weight: normal;
-      font-style: italic;
-    }
-
-    @font-face {
-      font-family: 'Playfair Display';
-      src: url('/fonts/static/PlayfairDisplay-Bold.ttf') format('truetype');
-      font-weight: bold;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Playfair Display';
-      src: url('/fonts/static/PlayfairDisplay-BoldItalic.ttf') format('truetype');
-      font-weight: bold;
-      font-style: italic;
-    }
-
-    body, h1, {
-      font-family: 'Playfair Display', serif;
-    }
-
-    header {
-      font-size: 1em;
-      text-align: left;
-    }
-
-    main video {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jacqueline.dev</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm Jacqueline. Welcome to my corner of the internet.</h1>
-  </header>
-  <main>
-    <video autoplay muted loop>
-      <source src="lighthouse.mp4" type="video/mp4">
-    </video>
-  </main>
+    <canvas class="webgl"></canvas>
+    <script src="script.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
 </body>
 </html>
