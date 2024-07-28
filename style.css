@@ -1,19 +1,51 @@
-*
-{
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;700&display=swap');
+
+body {
     margin: 0;
-    padding: 0;
-}
-
-html,
-body
-{
     overflow: hidden;
+    font-family: 'Fira Code', monospace;
 }
 
-.webgl
-{
+nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li .title {
+    color: #cccccc;
+    font-weight: 700;
+}
+
+nav ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+.webgl {
     position: fixed;
     top: 0;
     left: 0;
     outline: none;
+}
+
+.dg.ac {
+    z-index: 999 !important;
 }
