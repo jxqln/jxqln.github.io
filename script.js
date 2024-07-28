@@ -19,8 +19,28 @@ const parameters = {
     outsideColor: '#1b3984'
 };
 
+// GUI setup
+const gui = new dat.GUI();
+gui.add(parameters, 'count').min(100).max(1000000).step(100).onFinishChange(generateGalaxy);
+gui.add(parameters, 'size').min(0.001).max(0.1).step(0.001).onFinishChange(generateGalaxy);
+gui.add(parameters, 'radius').min(0.01).max(20).step(0.01).onFinishChange(generateGalaxy);
+gui.add(parameters, 'branches').min(2).max(20).step(1).onFinishChange(generateGalaxy);
+gui.add(parameters, 'spin').min(-5).max(5).step(0.001).onFinishChange(generateGalaxy);
+gui.add(parameters, 'randomness').min(0).max(2).step(0.001).onFinishChange(generateGalaxy);
+gui.add(parameters, 'randomnessPower').min(1).max(10).step(0.001).onFinishChange(generateGalaxy);
+gui.addColor(parameters, 'insideColor').onFinishChange(generateGalaxy);
+gui.addColor(parameters, 'outsideColor').onFinishChange(generateGalaxy);
+
+let galaxyMesh = null;
+
 // Galaxy generation function
 function generateGalaxy() {
+    if (galaxyMesh !== null) {
+        scene.remove(galaxyMesh);
+        galaxyMesh.geometry.dispose();
+        galaxyMesh.material.dispose();
+    }
+
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(parameters.count * 3);
     const colors = new Float32Array(parameters.count * 3);
@@ -64,13 +84,14 @@ function generateGalaxy() {
         vertexColors: true
     });
 
-    const points = new THREE.Points(geometry, material);
-    scene.add(points);
-    return points;
+    galaxyMesh = new THREE.Points(geometry, material);
+    scene.add(galaxyMesh);
 }
 
-const galaxy = generateGalaxy();
+// Initial galaxy creation
+generateGalaxy();
 
+// Camera and controls setup
 camera.position.x = 3;
 camera.position.y = 3;
 camera.position.z = 3;
@@ -78,12 +99,16 @@ camera.lookAt(scene.position);
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
+controls.minDistance = 3;
+controls.maxDistance = 20;
 
 // Animation
 function animate() {
     controls.update();
     requestAnimationFrame(animate);
-    galaxy.rotation.y += 0.002;
+    if (galaxyMesh) {
+        galaxyMesh.rotation.y += 0.002;
+    }
     renderer.render(scene, camera);
 }
 animate();
