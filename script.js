@@ -30,6 +30,7 @@ gui.add(parameters, 'randomness').min(0).max(2).step(0.001).onFinishChange(gener
 gui.add(parameters, 'randomnessPower').min(1).max(10).step(0.001).onFinishChange(generateGalaxy);
 gui.addColor(parameters, 'insideColor').onFinishChange(generateGalaxy);
 gui.addColor(parameters, 'outsideColor').onFinishChange(generateGalaxy);
+gui.domElement.style.marginTop = '45px';
 
 let galaxyMesh = null;
 
