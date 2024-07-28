@@ -8,12 +8,12 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 // Galaxy parameters
 const parameters = {
-    count: 100000,
+    count: 300000,
     size: 0.015,
     radius: 5,
     branches: 7,
     spin: 1,
-    randomness: 0.2,
+    randomness: 0.5,
     randomnessPower: 3,
     insideColor: '#ff6030',
     outsideColor: '#1b3984'
