@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pomodoro</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="../favicon.png">
+</head>
+<body>
+  <canvas width="500" height="500"></canvas>
+
+  <section>
+    <div class="timer-container">
+      <div class="timer-info">
+        <div class="time" id="time">25:00</div>
+      </div>
+      <div class="controls">
+        <button id="toggle">Begin</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="glslcanvas.min.js"></script>
+  <script src="frag.js"></script>
+  <script src="canvas.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
