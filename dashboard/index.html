@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wine Enthusiast Magazine Dashboard</title>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <div class="map-container">
+    <h1 class="map-title">Number of Reviews Per Country</h1>
+    <div id="map"></div>
+  </div>
+  <div class="chart-container">
+    <div id="chart"></div>
+    <h1 class="chart-title">Top Rated Wines Under $100</h1>
+    <p class="subtitle">Data from ~130,000 reviews from Wine Enthusiast Magazine. The top fifty wines under $100 are shown, with scores ranging from 97-100 points.</p>
+  </div>
+  <script src="map.js"></script>
+  <script src="barchart.js"></script>
+</body>
+</html>
