@@ -49,7 +49,7 @@ const data = {
     "maxCount": 54504,
     "totalSamples": 129908
   }
-}
+};
 
 const choroplethTrace = {
   type: 'choropleth',
@@ -152,3 +152,40 @@ const config = {
 };
 
 Plotly.newPlot("map", [choroplethTrace, equatorTrace, meridianTrace], layout, config);
+
+function rotateGlobe() {
+  let currentRotation = -45;
+
+  function animate() {
+    currentRotation = (currentRotation + 0.5) % 360;
+
+    Plotly.animate('map', {
+      data: [choroplethTrace, equatorTrace, meridianTrace],
+      layout: {
+        geo: {
+          projection: {
+            rotation: {
+              lon: currentRotation,
+              lat: 15
+            }
+          }
+        }
+      }
+    }, {
+      transition: {
+        duration: 0,
+        easing: 'linear'
+      },
+      frame: {
+        duration: 0,
+        redraw: true
+      }
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+}
+
+rotateGlobe();
