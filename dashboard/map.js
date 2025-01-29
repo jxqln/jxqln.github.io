@@ -154,35 +154,21 @@ const config = {
 Plotly.newPlot("map", [choroplethTrace, equatorTrace, meridianTrace], layout, config);
 
 function rotateGlobe() {
-  let currentRotation = -45;
+  let currentRotation = -150;
+  const totalRotation = 100;
+  const targetRotation = currentRotation + totalRotation;
+  const step = 0.5;
 
   function animate() {
-    currentRotation = (currentRotation + 0.5) % 360;
+    if (currentRotation < targetRotation) {
+      currentRotation += step;
 
-    Plotly.animate('map', {
-      data: [choroplethTrace, equatorTrace, meridianTrace],
-      layout: {
-        geo: {
-          projection: {
-            rotation: {
-              lon: currentRotation,
-              lat: 15
-            }
-          }
-        }
-      }
-    }, {
-      transition: {
-        duration: 0,
-        easing: 'linear'
-      },
-      frame: {
-        duration: 0,
-        redraw: true
-      }
-    });
+      Plotly.relayout('map', {
+        'geo.projection.rotation.lon': currentRotation
+      });
 
-    requestAnimationFrame(animate);
+      requestAnimationFrame(animate);
+    }
   }
 
   animate();
