@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
-  
+
 <body>
-  
+
   <header>
     <h1>Wine Enthusiast Reviews Dashboard</h1>
     <nav>
@@ -17,19 +17,24 @@
       <a href="https://jacqueline.dev">Home</a>
     </nav>
   </header>
-  
+
   <div class="map-container">
     <div id="map"></div>
   </div>
-  
+
   <div class="chart-container">
     <div id="chart"></div>
     <h1 class="chart-title">Top Rated Wines Under $100</h1>
     <p class="subtitle">Data from ~130,000 reviews from Wine Enthusiast Magazine. The top fifty wines under $100 are shown, with scores ranging from 97-100 points.</p>
   </div>
   
+  <div class="chart-container">
+    <p class="heatmap-title">Average Rating By US State and Vintage</p>
+    <img src="heatmap.png">
+  </div>
+
   <script src="map.js"></script>
   <script src="barchart.js"></script>
-  
+
 </body>
 </html>
