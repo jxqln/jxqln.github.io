@@ -13,7 +13,7 @@ const parameters = {
     radius: 5,
     branches: 7,
     spin: 1,
-    randomness: 0.5,
+    randomness: 0.55,
     randomnessPower: 3,
     insideColor: '#ff6030',
     outsideColor: '#1b3984'
