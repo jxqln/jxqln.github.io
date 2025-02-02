@@ -1,4 +1,3 @@
-// Scene setup
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({
@@ -6,11 +5,10 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-// Galaxy parameters
 const parameters = {
-    count: 300000,
+    count: 500000,
     size: 0.015,
-    radius: 5,
+    radius: 6.25,
     branches: 7,
     spin: 1,
     randomness: 0.55,
@@ -19,7 +17,6 @@ const parameters = {
     outsideColor: '#1b3984'
 };
 
-// GUI setup
 const gui = new dat.GUI();
 gui.add(parameters, 'count').min(100).max(1000000).step(100).onFinishChange(generateGalaxy);
 gui.add(parameters, 'size').min(0.001).max(0.1).step(0.001).onFinishChange(generateGalaxy);
@@ -30,11 +27,12 @@ gui.add(parameters, 'randomness').min(0).max(2).step(0.001).onFinishChange(gener
 gui.add(parameters, 'randomnessPower').min(1).max(10).step(0.001).onFinishChange(generateGalaxy);
 gui.addColor(parameters, 'insideColor').onFinishChange(generateGalaxy);
 gui.addColor(parameters, 'outsideColor').onFinishChange(generateGalaxy);
-gui.domElement.style.marginTop = '45px';
+gui.domElement.style.marginTop = '62px';
+
+gui.close();
 
 let galaxyMesh = null;
 
-// Galaxy generation function
 function generateGalaxy() {
     if (galaxyMesh !== null) {
         scene.remove(galaxyMesh);
@@ -52,7 +50,6 @@ function generateGalaxy() {
     for (let i = 0; i < parameters.count; i++) {
         const i3 = i * 3;
 
-        // Position
         const radius = Math.random() * parameters.radius;
         const spinAngle = radius * parameters.spin;
         const branchAngle = (i % parameters.branches) / parameters.branches * Math.PI * 2;
@@ -65,7 +62,6 @@ function generateGalaxy() {
         positions[i3 + 1] = randomY;
         positions[i3 + 2] = Math.sin(branchAngle + spinAngle) * radius + randomZ;
 
-        // Color
         const mixedColor = colorInside.clone();
         mixedColor.lerp(colorOutside, radius / parameters.radius);
 
@@ -86,16 +82,13 @@ function generateGalaxy() {
     });
 
     galaxyMesh = new THREE.Points(geometry, material);
+    
     scene.add(galaxyMesh);
 }
 
-// Initial galaxy creation
 generateGalaxy();
 
-// Camera and controls setup
-camera.position.x = 3;
-camera.position.y = 3;
-camera.position.z = 3;
+camera.position.set(3, -2.5, 2);
 camera.lookAt(scene.position);
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -103,7 +96,6 @@ controls.enableDamping = true;
 controls.minDistance = 3;
 controls.maxDistance = 20;
 
-// Animation
 function animate() {
     controls.update();
     requestAnimationFrame(animate);
@@ -114,7 +106,6 @@ function animate() {
 }
 animate();
 
-// Resize handler
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
