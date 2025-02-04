@@ -1,0 +1,36 @@
+body {
+  font-family: Roboto Condensed;
+  font-size: 24px;
+  line-height: 0.9;
+
+  background-color: #000000;
+  color: #ffffff;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-flow: dense;
+
+  height: 100vh;
+  max-height: 1000px;
+}
+
+div.canvas-holder {
+  background-color: black;
+  overflow: hidden;
+}
+
+div.text {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.text p {
+  font-size: 24px;
+  line-height: 1.3;
+  margin: 0;
+}
