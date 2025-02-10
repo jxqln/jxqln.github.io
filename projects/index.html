@@ -1,46 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="icon" type="image/png" href="../favicon.png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="/" class="title">jacqueline.dev</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h1>Projects</h1>
+<header>
+  <h1>jacqueline.dev</h1>
+  <div class="description">
+    1 / 6
+  </div>
+  <link rel="stylesheet" href="style.css">
+</header>
 
-        <article class="project">
-            <h2>GLSL Pomodoro Timer</h2>
-            <img src="pomodoro.png" alt="GLSL Pomodoro Timer">
-            <p>A <a href="https://jacqueline.dev/pomodoro/">minimalist pomodoro timer</a> with a real-time animated gradient built using GLSL shaders.</p>
-        </article>
+<nav>
+  <a href="#" class="prev">&lt;</a>
+  <a href="#" class="next">&gt;</a>
+</nav>
 
-        <article class="project">
-            <h2>Atlas of Volcanic Events</h2>
-            <img src="volcanoatlas.png" alt="Atlas of Volcanic Events">
-            <p>An <a href="https://jacqueline.dev/volcanoatlas/">interactive, 3D globe</a> plotting volcanic events from the National Centers for Environmental Information.</p>
-        </article>
+<div class="canvas-holder">
+  <canvas></canvas>
+  <div class="caption"><a href="https://jacqueline.dev/pomodoro/">Minimalist pomodoro timer</a> with a real-time animated gradient built using GLSL shaders.</div>
+</div>
 
-      <article class="project">
-          <h2>Massively Parallel Sequencing</h2>
-          <video controls>
-              <source src="yhdp.mp4" type="video/mp4">
-          </video>
-          <p>Discovered a protein family that forms hydrophobic conduits critical for building the bacterial outer membrane, with implications for antibiotic development. <a href="https://www.pnas.org/doi/10.1073/pnas.2015556117">paper</a> / <a href="https://journals.asm.org/doi/10.1128/msphere.00631-23">commentary</a></p>
-      </article>
-
-      <article class="project">
-          <h2>Writing</h2>
-          <p>Article: <a href="https://massivesci.com/articles/internal-clock-circadian-rhythm-jet-lag-sleep-metabolism/">Why the light from your phone breaks your internal clock</a>.</p>
-      </article>
-
-    </main>
-</body>
-</html>
+<script src="glslcanvas.min.js"></script>
+<script src="includes.js"></script>
+<script src="frag.js"></script>
+<script src="slides.js"></script>
