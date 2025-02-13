@@ -67,6 +67,17 @@ nav {
   .nav-left .title,
   .nav-right a,
   .nav-right .separator {
-    font-size: 7vw;
+    font-size: 5vw;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .nav-right a,
+  .nav-right .separator {
+    white-space: nowrap;
   }
 }
