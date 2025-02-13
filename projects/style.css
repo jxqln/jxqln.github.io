@@ -2,10 +2,9 @@
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 40px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-
   background-color: black;
   color: white;
   margin: 0;
@@ -17,7 +16,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 40px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -25,25 +24,26 @@ header h1 {
   font-size: 40px;
   margin: 0;
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 20px;
+  left: 20px;
 }
 
 header .description {
   margin: 0;
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 20px;
+  right: 20px;
+  font-size: 40px;
 }
 
 nav {
   position: fixed;
-  bottom: 50px;
+  bottom: 20px;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -61,14 +61,15 @@ div.canvas-holder {
 }
 
 div.canvas-holder canvas {
-  width: 90vmin;
-  height: 60vmin;
+  width: 100vw;
+  height: 100vh;
 }
 
 div.canvas-holder .caption {
   margin-top: 10px;
   font-size: 18px;
   text-align: center;
+  padding: 0 20px;
 }
 
 nav a {
@@ -76,8 +77,49 @@ nav a {
   color: #888888;
   transition: color 0.25s;
   padding: 0;
+  font-size: 40px;
 }
 
 nav a:hover {
   color: white;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+
+  header {
+    padding: 40px;
+  }
+
+  header h1 {
+    font-size: 40px;
+    top: 40px;
+    left: 40px;
+  }
+
+  header .description {
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+  }
+
+  nav {
+    bottom: 50px;
+    padding: 0 40px;
+  }
+
+  div.canvas-holder canvas {
+    width: 90vmin;
+    height: 60vmin;
+  }
+
+  div.canvas-holder .caption {
+    font-size: 20px;
+  }
+
+  nav a {
+    font-size: 40px;
+  }
 }
