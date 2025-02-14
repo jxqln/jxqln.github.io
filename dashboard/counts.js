@@ -1,3 +1,5 @@
+import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
+
 async function loadData() {
   const response = await fetch("record_counts.json");
   const data = await response.json();
