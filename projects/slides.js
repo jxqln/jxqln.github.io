@@ -1,9 +1,10 @@
 const projects = [
-  { src: "image1.png", title: "1 / 5", caption: 'Minimalist <a href="https://jacqueline.dev/pomodoro/">pomodoro timer</a> with a real-time animated gradient built using GLSL shaders.' },
-  { src: "image2.png", title: "2 / 5", caption: 'A <a href="https://jacquelinehf-xray-classifier.hf.space/">computer vision chest X-ray classifier</a> with GenAI plain language interpretation.' },
-  { src: "image3.png", title: "3 / 5", caption: 'An interactive, <a href="https://jacqueline.dev/volcanoatlas/">3D globe graphic</a> plotting volcanic events from the National Centers for Environmental Information.' },
-  { src: "image4.png", title: "4 / 5", caption: 'Discovered a protein family that forms hydrophobic conduits critical for building the bacterial outer membrane, with implications for antibiotic development. <a href="https://www.pnas.org/doi/10.1073/pnas.2015556117">paper</a> / <a href="https://journals.asm.org/doi/10.1128/msphere.00631-23">commentary</a>' },
-  { src: "image5.png", title: "5 / 5", caption: 'Article: <a href="https://massivesci.com/articles/internal-clock-circadian-rhythm-jet-lag-sleep-metabolism/">This is how the light from your phone breaks your internal clock</a>.' }
+  { src: "image1.png", title: "1 / 6", caption: 'Minimalist <a href="https://jacqueline.dev/pomodoro/">pomodoro timer</a> with a real-time animated gradient built using GLSL shaders.' },
+  { src: "image3.png", title: "2 / 6", caption: 'An interactive, <a href="https://jacqueline.dev/volcanoatlas/">3D globe graphic</a> plotting volcanic events from the National Centers for Environmental Information.' },
+  { src: "image6.png", title: "3 / 6", caption: 'A <a href="https://jacqueline.dev/dashboard/">data dashboard</a> visualizing a global volcanic eruption dataset.' },
+  { src: "image2.png", title: "4 / 6", caption: 'A <a href="https://jacquelinehf-xray-classifier.hf.space/">computer vision chest X-ray classifier</a> with GenAI plain language interpretation.' },
+  { src: "image4.png", title: "5 / 6", caption: 'Discovered a protein family that forms hydrophobic conduits critical for building the bacterial outer membrane, with implications for antibiotic development. <a href="https://www.pnas.org/doi/10.1073/pnas.2015556117">paper</a> / <a href="https://journals.asm.org/doi/10.1128/msphere.00631-23">commentary</a>' },
+  { src: "image5.png", title: "6 / 6", caption: 'Article: <a href="https://massivesci.com/articles/internal-clock-circadian-rhythm-jet-lag-sleep-metabolism/">This is how the light from your phone breaks your internal clock</a>.' }
 ]
 
 const prevTag = document.querySelector("nav a.prev")
