@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas of Volcanic Events</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+    
+<body>
+    <div class="page-container">
+        <div class="header">
+            <h1 class="main-heading">Atlas of Volcanic Events</h1>
+            <h2 class="sub-heading">Dataset: <a href="https://www.ngdc.noaa.gov/hazel/view/hazards/volcano/event-search">National Centers for Environmental Information</a></h2>
+        </div>
+        <div class="grid-container">
+            <!-- Globe Card -->
+            <div class="card globe-card">
+                <div class="card-content">
+                    <h2 class="card-title">Global Volcanic Events</h2>
+                    <svg id="globe"></svg>
+                    <div id="tooltip" class="tooltip" style="opacity: 0;"></div>
+                </div>
+            </div>
+            <!-- Country Counts Card -->
+            <div class="card chart-card">
+                <div class="card-content">
+                    <h2 class="card-title">Number of Eruptions Per Country</h2>
+                    <div id="chart"></div>
+                </div>
+            </div>
+            <!-- Text Card -->
+            <div class="card text-card">
+                <div class="card-content">
+                    <p class="text-content">
+                        The deadliest eruption ever was <b>Mount Tambora (1815, Indonesia)</b>, killing an estimated <b>60,000</b> people. It ejected so much ash into the atmosphere that global temperatures dropped, causing the 1816 <b>"Year Without a Summer,"</b> leading to widespread crop failures. In New England, there was snow in June. In Europe, food shortages led to riots. Also, this weird summer indoors led Mary Shelley to write <i>Frankenstein</i>.
+                    </p>
+                </div>
+            </div>
+            <div class="bottom-row">
+                <!-- Bar Chart Card -->
+                <div class="card bar-chart-card">
+                    <div class="card-content">
+                        <h2 class="card-title">Volcanic Eruptions Since 1800</h2>
+                        <div id="bar-chart"></div>
+                    </div>
+                </div>
+                <!-- Scatter Plot Card -->
+                <div class="card scatter-plot-card">
+                    <div class="card-content">
+                        <h2 class="card-title">Deaths from Volcanic Events</h2>
+                        <div id="scatter-plot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="globe.js"></script>
+    <script src="counts.js"></script>
+    <script src="barChart.js"></script>
+    <script src="scatterPlot.js"></script>
+</body>
+</html>
