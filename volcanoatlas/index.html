@@ -1,6 +1,7 @@
 <head>
   <title>Atlas of Volcanic Events</title>
   <link rel="icon" type="image/png" href="../favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -24,6 +25,20 @@
       width: 100%;
       height: 100%;
     }
+    .link {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-family: 'Roboto Mono', monospace;
+      text-decoration: none;
+      color: #898BAA;
+      font-weight: 500;
+      z-index: 1000;
+      transition: color 0.3s ease;
+    }
+    .link:hover {
+      color: #B66459;
+    }
   </style>
   <script type="importmap">{ "imports": {
     "three": "https://esm.sh/three",
@@ -31,6 +46,7 @@
   }}</script>
 </head>
 <body>
+  <a href="https://jacqueline.dev/dashboard/" class="link">Atlas of Volcanic Events</a>
   <div id="background"></div>
   <div id="globeViz"></div>
   <script type="module">
